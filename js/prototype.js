@@ -6,7 +6,10 @@ let lenovo ={
     __proto__: computer
 }
 
+
 let hp ={
+
+    cost: 3000,
     __proto__:lenovo,
     // __proto__:computer
 }
@@ -14,5 +17,11 @@ let hp ={
 
 // Object.setPrototypeOf(hp, computer)
 console.log(hp.__proto__, lenovo.__proto__)
+
+let dell = {
+    cost: 4000
+}
+Object.setPrototypeOf(dell, hp)
+console.log(Object.getPrototypeOf(dell))
 
 //every class should have one proto 
